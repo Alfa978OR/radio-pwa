@@ -6,10 +6,11 @@ let playing = false;
 button.addEventListener("click", () => {
   if (!playing) {
     audio.play();
-    button.textContent = "? Pause";
+    button.textContent = "Pause";
   } else {
     audio.pause();
-    button.textContent = "? Play";
+    button.textContent = "Play";
   }
   playing = !playing;
 });
+
