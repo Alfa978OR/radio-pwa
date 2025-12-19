@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.app {
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #e53935;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.tagline {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}

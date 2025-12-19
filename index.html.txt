@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfa Online Radio</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <img src="logo.png" alt="Station Logo" class="logo" />
+
+    <h1>Alfa Online Radio</h1>
+    <p class="tagline">Streaming live 24/7</p>
+
+    <button id="playBtn">? Play</button>
+
+    <audio id="radio" preload="none">
+      <source src="https://stream.zeno.fm/hx9w4enqbkmtv" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
