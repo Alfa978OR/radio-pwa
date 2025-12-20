@@ -52,4 +52,9 @@ button:active {
 
 .whatsapp {
   background: #25D366;
+  font-weight: bold;
 }
+.whatsapp {
+  text-decoration: none;
+}
+
