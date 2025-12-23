@@ -6,11 +6,12 @@ let playing = false;
 button.addEventListener("click", () => {
   if (!playing) {
     audio.play();
-    button.textContent = "Pause";
+    button.textContent = "Misa kancane / Pause";
   } else {
     audio.pause();
-    button.textContent = "Play";
+    button.textContent = "Dlala / Play";
   }
   playing = !playing;
 });
+
 
