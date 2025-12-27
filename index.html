@@ -54,7 +54,7 @@
     const btn = document.getElementById("playBtn");
 
     audio.addEventListener("error", () => {
-      alert("Stream temporarily unavailable. Please try again.");
+      alert("Stream temporarily unavailable. Please select PLAY again.");
     });
 
     btn.onclick = async () => {
@@ -64,7 +64,7 @@
           btn.textContent = "Misa kancane / Pause";
           setMediaSession();
         } catch (e) {
-          alert("Unable to start stream. Please try again.");
+          alert("Unable to start stream. Please select PLAY again.");
         }
       } else {
         audio.pause();
@@ -97,6 +97,7 @@
   </script>
 </body>
 </html>
+
 
 
 
