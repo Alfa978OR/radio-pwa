@@ -76,5 +76,40 @@ button:active {
   background-color: #1a5bb8;
 }
 
+.btn.home {
+  display: block;
+  margin: 12px auto 0;
+  padding: 14px 22px;
+
+  /* FORCE consistent color */
+  background-color: #2c7be5 !important;
+  color: #ffffff !important;
+
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 320px;
+  text-align: center;
+
+  /* Firefox-specific resets */
+  appearance: none;
+  -moz-appearance: none;
+  border: none;
+}
+
+.btn.home:visited {
+  background-color: #2c7be5;
+  color: #ffffff;
+}
+
+.btn.home:hover,
+.btn.home:focus {
+  background-color: #1a5bb8;
+  color: #ffffff;
+}
+
+
+
 
 
