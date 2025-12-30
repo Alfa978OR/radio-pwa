@@ -58,3 +58,23 @@ button:active {
   text-decoration: none;
 }
 
+.btn.home {
+  display: block;
+  margin: 12px auto 0;
+  padding: 14px 22px;
+  background-color: #2c7be5; /* calm blue */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 320px;
+  text-align: center;
+}
+
+.btn.home:hover {
+  background-color: #1a5bb8;
+}
+
+
+
