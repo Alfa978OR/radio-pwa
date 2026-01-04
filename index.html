@@ -40,7 +40,7 @@
 
     <button id="playBtn"
   data-cf-analytics="Play Button Click">
-  Dlala / Play
+  Dlala ▶️ Play
 </button>
 
 <div class="links">
@@ -50,7 +50,7 @@
     target="_blank"
     rel="noopener"
   >
-    Hlanganyela licembu leWhatsApp lebalaleli
+    Hlanganyela licembu 💬 leWhatsApp lebalaleli
   </a>
 
   <a
@@ -58,7 +58,7 @@
     class="btn home"
     target="_self"
   >
-    Buyela ekhasini lekhaya
+    🏠 Buyela ekhasini lekhaya
   </a>
 </div>
 
@@ -74,21 +74,21 @@
     const btn = document.getElementById("playBtn");
 
     audio.addEventListener("error", () => {
-      alert("Stream temporarily unavailable. Please select PLAY again.");
+      alert("📢 Stream temporarily unavailable. Please select Ok, and then select ▶️ PLAY again.");
     });
 
     btn.onclick = async () => {
       if (audio.paused) {
         try {
           await audio.play();
-          btn.textContent = "Misa kancane / Pause";
+          btn.textContent = "Misa kancane ⏸️ Pause";
           setMediaSession();
         } catch (e) {
-          alert("Unable to start stream. Please select PLAY again.");
+          alert("📢 Unable to start stream. Please select Ok, and then select ▶️ PLAY again.");
         }
       } else {
         audio.pause();
-        btn.textContent = "Dlala / Play";
+        btn.textContent = "Dlala ▶️ Play";
       }
     };
 
@@ -121,6 +121,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
