@@ -3,99 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfa Online Radio 📖 isiZulu</title>
-  <!-- Open Graph / WhatsApp Preview -->
-<meta property="og:title" content="Alfa Online Radio">
-<meta property="og:description" content="Lalela ukufundwa kweBhayibheli ngesiZulu">
+  <title>Alfa Online Radio siSwati</title>
 
-<meta property="og:image" content="https://alfa-zulu.pages.dev/og-image-v2.png">
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="640">
-<meta property="og:url" content="https://alfa-zulu.pages.dev/">
-<meta property="og:type" content="website">
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="Alfa Online Radio">
+  <meta property="og:description" content="Lalela kufundvwa kweBhayibheli ngesiSwati">
+  <meta property="og:image" content="https://alfaradio.pages.dev/og-image-v5.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://alfaradio.pages.dev/">
+  <meta property="og:type" content="website">
 
   <!-- Favicon -->
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="shortcut icon" href="favicon-32.png">
-
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+
+  <!-- LIVE status styles (self-contained) -->
+  <style>
+    .audio-status {
+      margin-top: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .live {
+      color: #ff3b3b;
+      animation: blink 1.2s infinite;
+    }
+
+    .paused {
+      color: #cbd5e1;
+    }
+
+    .connecting {
+      color: #facc15;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.35; }
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 
 <body>
   <div class="app">
     <img src="logo.png" alt="Station Logo" class="logo">
 
-    <h1>Alfa Online Radio isiZulu</h1>
+    <h1>Alfa Online Radio siSwati</h1>
 
     <p class="tagline">
-<span>Khetha u-“Dlala ▶️ Play” ukuze ulalele ukufundwa kweBhayibheli. Sicela uqaphele:</span><br>
-<span>⚠️🔇 ekuqaleni kuba nokuthula cishe imizuzwana engu-10 kuya kwengu-20,</span><br>
-<span>⚠️📢 bese kulandela isikhangiso sentengiso ngolunye ulimi (imizuzwana engu-30 kuya kwengu-40) ngaphambi kokuba kuqale ukufundwa kweBhayibheli.</span>
+      <span>Khetha "Dlala ▶️ Play" kute ulalele kufundvwa kweBhayibheli.</span><br>
+      <span>⚠️🔇 ekuqaleni kunekuthula cishe kwemizuzwana leli-10–20,</span><br>
+      <span>⚠️📢 bese kulandzela sifihlakhondle sekutsengisa ngolimi lwangaphandle
+      (semizuzwana leli-30–40) ngaphambi kwekuti kufundvo kwemagama
+      eBhayibheli kucale.</span>
     </p>
 
-    <button id="playBtn"
-  data-cf-analytics="Play Button Click">
-  Dlala ▶️ Play
-</button>
+    <button id="playBtn" data-cf-analytics="Play Button Click">
+      Dlala ▶️ Play
+    </button>
 
-<div id="audioStatus" class="audio-status">⏸️ PAUSED</div>
-    
-<div class="links">
-  <a
-  href="https://chat.whatsapp.com/FoQl3iIoR4L6rb7PK6zePm"
-  class="btn whatsapp"
-  target="_blank"
-  rel="noopener"
->
-  <span>Joyina Iqembu labaLaleli</span><br>
-  <span>👥💬 ku-WhatsApp</span>
-</a>
+    <div id="audioStatus" class="audio-status paused">
+      ⏸️ PAUSED
+    </div>
 
+    <div class="links">
+      <a
+        href="https://chat.whatsapp.com/FoQl3iIoR4L6rb7PK6zePm"
+        class="btn whatsapp"
+        target="_blank"
+        rel="noopener"
+      >
+        <span>Hlanganyela licembu</span><br>
+        <span>👥💬 leWhatsApp lebalaleli</span>
+      </a>
 
-  <a
-    href="https://alfaradio.co.za/"
-    class="btn home"
-    target="_self"
-  >
-    🏠 Buya ekhasini lekhaya
-  </a>
-</div>
-
+      <a
+        href="https://alfaradio.co.za/"
+        class="btn home"
+      >
+        🏠 Buyela ekhasini lekhaya
+      </a>
+    </div>
 
     <audio id="radio" preload="none" crossorigin="anonymous">
-      <source src="https://stream.zeno.fm/u8opaslsv5fvv" type="audio/mpeg">
+      <source src="https://stream.zeno.fm/hx9w4enqbkmtv" type="audio/mpeg">
     </audio>
   </div>
 
-  <!-- JavaScript MUST be inside script tags -->
+  <footer>
+    © 2026 Alfa Online Radio
+  </footer>
+
+  <!-- ✅ SINGLE, SAFE SCRIPT -->
   <script>
     const audio = document.getElementById("radio");
-    const btn = document.getElementById("playBtn");
+    const playBtn = document.getElementById("playBtn");
+    const statusEl = document.getElementById("audioStatus");
 
-    audio.addEventListener("error", () => {
-      alert("📢 Stream temporarily unavailable. Please select Ok, and then select ▶️ PLAY again.");
+    let retryTimer = null;
+
+    function setStatus(type, text) {
+      statusEl.className = "audio-status " + type;
+      statusEl.textContent = text;
+    }
+
+    async function playStream() {
+      playBtn.disabled = true;
+      setStatus("connecting", "⏳ CONNECTING…");
+
+      try {
+        await audio.play();
+      } catch {
+        scheduleRetry();
+      }
+    }
+
+    function pauseStream() {
+      audio.pause();
+      playBtn.textContent = "Dlala ▶️ Play";
+      playBtn.disabled = false;
+      setStatus("paused", "⏸️ PAUSED");
+    }
+
+    function scheduleRetry() {
+      setStatus("connecting", "🔁 RETRYING…");
+      retryTimer = setTimeout(playStream, 3000);
+    }
+
+    playBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        playStream();
+      } else {
+        pauseStream();
+      }
     });
 
-    btn.onclick = async () => {
-      if (audio.paused) {
-        try {
-          await audio.play();
-          btn.textContent = "Misa kancane ⏸️ Pause";
-          setMediaSession();
-        } catch (e) {
-          alert("📢 Unable to start stream. Please select Ok, and then select ▶️ PLAY again.");
-        }
-      } else {
-        audio.pause();
-        btn.textContent = "Dlala ▶️ Play";
-      }
-    };
+    audio.addEventListener("playing", () => {
+      clearTimeout(retryTimer);
+      playBtn.disabled = false;
+      playBtn.textContent = "Misa kancane ⏸️ Pause";
+      setStatus("live", "🔴 LIVE");
 
-    function setMediaSession() {
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: "Alfa Online Radio",
@@ -105,22 +164,18 @@
             { src: "icon-512.png", sizes: "512x512", type: "image/png" }
           ]
         });
-
-        navigator.mediaSession.setActionHandler("play", async () => {
-          await audio.play();
-          btn.textContent = "Misa kancane / Pause";
-        });
-
-        navigator.mediaSession.setActionHandler("pause", () => {
-          audio.pause();
-          btn.textContent = "Dlala / Play";
-        });
       }
-    }
-  </script>
+    });
 
-  <footer>
-    © 2026 Alfa Online Radio
-  </footer>
+    audio.addEventListener("pause", () => {
+      if (!audio.ended) {
+        setStatus("paused", "⏸️ PAUSED");
+      }
+    });
+
+    audio.addEventListener("error", () => {
+      scheduleRetry();
+    });
+  </script>
 </body>
 </html>
