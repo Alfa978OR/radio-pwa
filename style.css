@@ -41,14 +41,17 @@ button:active {
 }
 
 .btn {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
+  display: block;
+  width: 100%;
+  max-width: 320px;   /* controls visual width */
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
+
 
 .whatsapp {
   background: #25D366;
@@ -108,6 +111,7 @@ button:active {
   background-color: #1a5bb8;
   color: #ffffff;
 }
+
 
 
 
