@@ -62,21 +62,21 @@
     <h1>Alfa Online Radio siSwati</h1>
 
     <p class="tagline">
-      <span>Khetha "Dlala    Play" kute ulalele kufundvwa kweBhayibheli.</span><br>
-      <span>     ekuqaleni kunekuthula cishe kwemizuzwana leli-10–20,</span><br>
-      <span>     bese kulandzela sifihlakhondle sekutsengisa ngolimi lwangaphandle
+      <span>Khetha "Dlala ▶️ Play" kute ulalele kufundvwa kweBhayibheli.</span><br>
+      <span>⚠️🔇 ekuqaleni kunekuthula cishe kwemizuzwana leli-10–20,</span><br>
+      <span>⚠️📢 bese kulandzela sifihlakhondle sekutsengisa ngolimi lwangaphandle
       (semizuzwana leli-30–40) ngaphambi kwekuti kufundvo kwemagama
       eBhayibheli kucale.</span>
     </p>
 
     <button id="playBtn" data-cf-analytics="Play Button Click">
-      Dlala    Play
+      Dlala ▶️ Play
     </button>
 
     <div id="audioStatus" class="audio-status paused">
-         PAUSED
+      ⏸️ PAUSED
     </div>
-
+    
     <div class="links">
       <a
         href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
@@ -85,14 +85,14 @@
         rel="noopener"
       >
         <span>Hlanganyela licembu</span><br>
-        <span>     leWhatsApp lebalaleli</span>
+        <span>👥💬 leWhatsApp lebalaleli</span>
       </a>
 
       <a
         href="https://alfaradio.co.za/"
         class="btn home"
       >
-           Buyela ekhasini lekhaya
+        🏠 Buyela ekhasini lekhaya
       </a>
     </div>
 
@@ -105,7 +105,7 @@
     © 2026 Alfa Online Radio
   </footer>
 
-  <!--   SINGLE, SAFE SCRIPT -->
+  <!-- ✅ SINGLE, SAFE SCRIPT -->
   <script>
     const audio = document.getElementById("radio");
     const playBtn = document.getElementById("playBtn");
@@ -120,7 +120,7 @@
 
     async function playStream() {
       playBtn.disabled = true;
-      setStatus("connecting", "  CONNECTING…");
+      setStatus("connecting", "⏳ CONNECTING…");
 
       try {
         await audio.play();
@@ -131,13 +131,13 @@
 
     function pauseStream() {
       audio.pause();
-      playBtn.textContent = "Dlala    Play";
+      playBtn.textContent = "Dlala ▶️ Play";
       playBtn.disabled = false;
-      setStatus("paused", "   PAUSED");
+      setStatus("paused", "⏸️ PAUSED");
     }
 
     function scheduleRetry() {
-      setStatus("connecting", "   RETRYING…");
+      setStatus("connecting", "🔁 RETRYING…");
       retryTimer = setTimeout(playStream, 3000);
     }
 
@@ -152,8 +152,8 @@
     audio.addEventListener("playing", () => {
       clearTimeout(retryTimer);
       playBtn.disabled = false;
-      playBtn.textContent = "Misa kancane    Pause";
-      setStatus("live", "   LIVE");
+      playBtn.textContent = "Misa kancane ⏸️ Pause";
+      setStatus("live", "🔴 LIVE");
 
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
@@ -169,7 +169,7 @@
 
     audio.addEventListener("pause", () => {
       if (!audio.ended) {
-        setStatus("paused", "   PAUSED");
+        setStatus("paused", "⏸️ PAUSED");
       }
     });
 
@@ -179,3 +179,5 @@
   </script>
 </body>
 </html>
+
+
