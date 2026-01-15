@@ -1,28 +1,56 @@
-<div class="links">
-  <a
-    href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
-    class="btn whatsapp"
-    target="_blank"
-    rel="noopener"
-  >
-    <span>Hlanganyela licembu</span><br>
-    <span>👥💬 leWhatsApp lebalaleli</span>
-  </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfa Online Radio siSwati</title>
 
-  <!-- 📖 SiSwati Bible button (inserted between WhatsApp and Home) -->
-  <a
-    href="https://www.bible.com/af/bible/604/HEB.1.SWT"
-    class="btn btn-whatsapp"
-    target="_blank"
-    rel="noopener"
-  >
-    📖 Fundza liBhayibheli ngesiSwati
-  </a>
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="Alfa Online Radio">
+  <meta property="og:description" content="Lalela kufundvwa kweBhayibheli ngesiSwati">
+  <meta property="og:image" content="https://alfaradio.pages.dev/og-image-v5.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://alfaradio.pages.dev/">
+  <meta property="og:type" content="website">
 
-  <a
-    href="https://alfaradio.co.za/"
-    class="btn home"
-  >
-    🏠 Buyela ekhasini lekhaya
-  </a>
-</div>
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- LIVE status styles (self-contained) -->
+  <style>
+    .audio-status {
+      margin-top: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .live {
+      color: #ff3b3b;
+      animation: blink 1.2s infinite;
+    }
+
+    .paused {
+      color: #cbd5e1;
+    }
+
+    .connecting {
+      color: #facc15;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.35; }
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
