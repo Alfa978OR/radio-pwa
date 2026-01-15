@@ -114,6 +114,27 @@ button:hover {
 }
 
 /* =========================
+   Info button – refined
+========================= */
+
+.btn.info {
+  background-color: #0284c7;   /* softer, darker blue than Home */
+  color: #eaf6ff;              /* slightly muted white */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 600;            /* calmer than primary buttons */
+}
+
+/* Subtle hover – not dominant */
+.btn.info:hover {
+  background-color: #0369a1;
+}
+
+
+
+/* =========================
    Footer
 ========================= */
 
@@ -196,5 +217,6 @@ footer {
 .btn.info:hover {
   background-color: #0369a1;
 }
+
 
 
