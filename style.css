@@ -89,9 +89,10 @@ button#playBtn {
   font-size: 20px;
 }
 
-/* WhatsApp */
-.btn.whatsapp {
-  background: #25d366;
+/* WhatsApp / Bible buttons */
+.btn.whatsapp,
+.btn.btn-whatsapp {
+  background-color: #25d366; /* WhatsApp green */
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -104,35 +105,32 @@ button#playBtn {
   text-decoration: none;
 }
 
-/* Hover states */
-button:hover {
-  filter: brightness(1.05);
-}
-
-.btn:hover {
-  filter: brightness(1.05);
-}
-
-/* =========================
-   Info button – refined
-========================= */
-
-.btn.info {
-  background-color: #0284c7;   /* softer, darker blue than Home */
-  color: #eaf6ff;              /* slightly muted white */
+/* Info button */
+.btn.info,
+.button.btn-info {
+  background-color: #0284c7;   /* softer, darker blue */
+  color: #eaf6ff;              /* muted white */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-weight: 600;            /* calmer than primary buttons */
+  font-weight: 600;
 }
 
-/* Subtle hover – not dominant */
-.btn.info:hover {
+/* Hover states */
+button:hover,
+.btn:hover,
+.btn.btn-whatsapp:hover,
+.button.btn-info:hover {
+  filter: brightness(1.05);
+}
+
+/* Refined hover for Info button (slightly darker) */
+.btn.info:hover,
+.button.btn-info:hover {
   background-color: #0369a1;
+  filter: brightness(1.05);
 }
-
-
 
 /* =========================
    Footer
@@ -154,6 +152,10 @@ footer {
   }
 }
 
+/* =========================
+   Audio status
+========================= */
+
 .audio-status {
   margin-top: 10px;
   font-size: 0.95rem;
@@ -162,61 +164,14 @@ footer {
   opacity: 0.85;
 }
 
-/* Live = red */
 .audio-status.live {
   color: #ff4d4d;
 }
 
-/* Paused = neutral */
 .audio-status.paused {
   color: #bbbbbb;
 }
 
-/* Error state */
 .audio-status.error {
   color: #ffb020;
 }
-
-/* =========================
-   Consistent button colours
-========================= */
-
-/* 📖 Bible button – WhatsApp-green family */
-.btn.btn-whatsapp {
-  background-color: #25d366; /* WhatsApp green */
-  color: #ffffff;
-}
-
-/* ℹ️ Info button – neutral info blue */
-.button.btn-info {
-  background-color: #0ea5e9; /* soft info blue */
-  color: #ffffff;
-}
-
-/* Hover states */
-.btn.btn-whatsapp:hover,
-.button.btn-info:hover {
-  filter: brightness(1.1);
-}
-
-/* =========================
-   Info button – refined
-========================= */
-
-.btn.info {
-  background-color: #0284c7;   /* softer, darker blue than Home */
-  color: #eaf6ff;              /* slightly muted white */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-weight: 600;            /* calmer than primary buttons */
-}
-
-/* Subtle hover – not dominant */
-.btn.info:hover {
-  background-color: #0369a1;
-}
-
-
-
