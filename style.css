@@ -156,4 +156,26 @@ footer {
   color: #ffb020;
 }
 
+/* =========================
+   Consistent button colours
+========================= */
+
+/* 📖 Bible button – WhatsApp-green family */
+.btn.btn-whatsapp {
+  background-color: #25d366; /* WhatsApp green */
+  color: #ffffff;
+}
+
+/* ℹ️ Info button – neutral info blue */
+.button.btn-info {
+  background-color: #0ea5e9; /* soft info blue */
+  color: #ffffff;
+}
+
+/* Hover states */
+.btn.btn-whatsapp:hover,
+.button.btn-info:hover {
+  filter: brightness(1.1);
+}
+
 
