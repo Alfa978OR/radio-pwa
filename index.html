@@ -74,7 +74,7 @@
     </button>
 
     <div id="audioStatus" class="audio-status paused">
-      ⏸️ PAUSED
+      KUMISIWE ⏸️ PAUSED
     </div>
 
     <!-- 🔗 Action buttons -->
@@ -106,8 +106,6 @@
 >
   ℹ️ Mayelana ne-Alfa Radio
 </a>
-
-    </a>
 
       <!-- 🏠 Home -->
       <a
@@ -174,8 +172,8 @@
     audio.addEventListener("playing", () => {
       clearTimeout(retryTimer);
       playBtn.disabled = false;
-      playBtn.textContent = "Misa kancane ⏸️ Pause";
-      setStatus("live", "🔴 LIVE");
+      playBtn.textContent = "⏸️ Yima kancane ⏸️ Pause";
+      setStatus("live", "KUYADLALA / BUKHOMA 🔴 LIVE");
 
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
@@ -201,6 +199,7 @@
   </script>
 </body>
 </html>
+
 
 
 
