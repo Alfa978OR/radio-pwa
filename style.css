@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --red-play: #e53935;
+  --green-whatsapp: #25d366;
+  --green-bible: #65a30d;
+  --blue-home: #2c7be5;
+  --blue-info: #64748b;
+  --text-soft: #eaf6ff;
+  --bg-dark: #111111;
+}
+
+
 body {
   margin: 0;
   font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -179,4 +190,5 @@ footer {
 .audio-status.error {
   color: #ffb020;
 }
+
 
