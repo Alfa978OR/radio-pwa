@@ -20,6 +20,11 @@
   --bg-dark: #111111;
 }
 
+header img {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
 
 body {
   margin: 0;
@@ -190,5 +195,6 @@ footer {
 .audio-status.error {
   color: #ffb020;
 }
+
 
 
