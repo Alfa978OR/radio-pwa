@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <title>Info | Alfa Online Radio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
   <meta name="description" content="Lwati lwesiSwati ku-Alfa Online Radio – imininingwane, injongo, nekuchumana.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f172a">
-
+ 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Info Siswati | Alfa Online Radio">
   <meta property="og:description" content="Lwati lwesiSwati nge-Alfa Online Radio.">
   <meta property="og:url" content="https://siswati.alfaradio.co.za/info.html">
   <meta property="og:image" content="/og-image.png">
-
+ 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-
+ 
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -29,44 +29,42 @@
       margin: 0;
       line-height: 1.6;
     }
-
+ 
     header {
       padding: 1.5rem;
       text-align: center;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
+ 
     header img {
-      max-width: 140px;
-      height: auto;
-      margin-bottom: 0.5rem;
+      display: none; /* CHANGE 1: Hide logo image */
     }
-
+ 
     header h1 {
       margin: 0.2rem 0 0;
       font-size: 1.8rem;
     }
-
+ 
     main {
       max-width: 720px;
       margin: 0 auto;
       padding: 2rem 1.5rem 3rem;
     }
-
+ 
     section {
       margin-bottom: 2.2rem;
     }
-
+ 
     section h2 {
       font-size: 1.4rem;
       margin-bottom: 0.4rem;
       color: #38bdf8;
     }
-
+ 
     section p {
       opacity: 0.9;
     }
-
+ 
     .actions {
       margin-top: 3rem;
       display: flex;
@@ -74,7 +72,7 @@
       gap: 1rem;
       align-items: center;
     }
-
+ 
     .btn {
       display: inline-block;
       padding: 0.75rem 1.3rem;
@@ -82,27 +80,27 @@
       font-weight: 600;
       text-decoration: none;
       text-align: center;
-      width: 240px; /* fixed width for uniform size */
+      width: 240px; /* CHANGE 2: Fixed width for uniform button size */
     }
-
+ 
     .btn-home {
-      background: #3b82f6; /* blue */
+      background: #3b82f6; /* CHANGE 3: Blue color for Home button */
       color: #f8fafc;
     }
-
+ 
     .btn-home:hover {
-      background: #2563eb; /* darker blue on hover */
+      background: #2563eb;
     }
-
+ 
     .btn-whatsapp {
       background: #25d366;
       color: #052e16;
     }
-
+ 
     .btn-whatsapp:hover {
       background: #1ebe5b;
     }
-
+ 
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -111,47 +109,96 @@
       border-top: 1px solid rgba(255,255,255,0.08);
     }
   </style>
-
+ 
   <!-- Cloudflare Web Analytics -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "0505b11108564b33b0d5d66509727745"}'>
   </script>
 </head>
-
+ 
 <body>
   <header>
-    <!-- ✅ Corrected logo path -->
-    <img src="/radio-pwa/alfa-logo-landing-v3.png" alt="Alfa Radio logo">
+    <img
+      src="https://alfaradio.co.za/radio-pwa/alfa-logo-landing-v3.png"
+      alt="Alfa Radio logo">
     <h1>Alfa Online Radio</h1>
   </header>
-
+ 
   <main>
-    <!-- content unchanged -->
-    <section id="identity">…</section>
-    <section id="general-info">…</section>
-    <section id="contact">…</section>
-
+    <section id="identity">
+      <h2>Ngubani futsi yini i-Alfa Online Radio?</h2>
+      <p>
+        IRadio Alfa yacala kusakata Tindzaba Letimnandzi ku-FM ngenyanga yaMeyi ngemnyaka wa-2000.
+        I-Alfa Online Radio yacala kusakateka nge-inthanethi ngenyanga yaSepthemba ngemnyaka wa-2023
+        ngesiSwati nangesiZulu. Balaleli bangalalela tinhlelo nemisebenti ye-Alfa Online Radio
+        ngemakhalekhukhwini abo kanye nangemakhompyutha. I-app lensha, lehlelelwe kahle kusebenta
+        ngemakhalekhukhwini, yethulwa ngenyanga yaBhimbidvwane (January) ngemnyaka wa-2026.
+      </p>
+      <p>
+        I-Alfa Online Radio isakata kufundvwa kweBhayibheli ngevesi nangevesi, kufundziswa
+        kweBhayibheli, kanye nemicondvo nekukhutsata lokwakha umoya. Luhlelo lwetinhlelo
+        netindzaba letimayelana nekusakata kwabelwana ngato ngeWhatsApp Community Group.
+      </p>
+      <p>
+        Umsebenti nenhloso ye-Alfa Online Radio uchazwa kahle kakhulu ngalamavesi eBhayibheli
+        lalandzelako: Asitishumayeli tsine, kodvwa sishumayela kutsi Khristu Jesu uyiNkhosi, tsine-ke sitisebenti tenu ngenca yakhe. Ngobe yena lowo Nkulunkulu lowatsi: Akuvele kukhanya ebumnyameni, nguye futsi lokhanyise etinhlitiyweni tetfu, kuze sikwati kubona inkhatimulo yaNkulunkulu ebusweni baKhristu. (2 kubaseKorinthe 4:5–6)
+      </p>
+    </section>
+ 
+    <section id="general-info">
+      <h2>Kungani libito lelitsi "Alfa"?</h2>
+      <p>
+        Libito lelitsi <strong>"Alfa"</strong> libonakalisa umlayeto weBhayibheli lotsi Nkulunkulu
+        usicalo nesiphetfo, ungumtfombo wekuphila, weliciniso, futsi unguLowo lowenta konkhe kube
+        kusha. Lelibito lisho sisekelo semsebenti webuKhristu we-Alfa Online Radio kanye nekutinikela
+        kwayo ekufundzisiseni iBhayibheli ngekwetsembeka nasekushumayeleni liVangeli.
+      </p>
+      <p>
+        • "Mine ngingu-Alfa na-Omega," kusho iNkhosi, Nkulunkulu, Somandla lokhona, nalabekhona,
+        nalotako." (Sembulo 1:8)
+      </p>
+      <p>
+        • Wase utsi kimi: "Sekwentekile. Mine ngingu-Alfa na-Omega, sicalo nesiphetfo. Lowo lowomile ngiyawumnika lilungelo lekunatsa mahhala emtfonjeni wemanti ekuphila. (Sembulo 21:6)
+      </p>
+      <p>
+        • "Ngingu-Alfa na-Omega, wekucala newekugcina, sicalo nesiphetfo." (Sembulo 22:13)
+      </p>
+    </section>
+ 
+    <section id="contact">
+      <h2>Imininingwane yekutsintana</h2>
+      <p>
+        • Joyina iWhatsApp Community Group kute utfole timemetelo kanye netindzaba tetinhlelo.
+        I-link iyatfolakala emakhasini lamabili labhalwe kutsi "Listen to".
+      </p>
+      <p>
+        • Uma udzinga lolunye lwati, wemukelekile kutsi usithumele i-imeyili ku
+        <strong>info@alfaradio.co.za</strong>.
+      </p>
+    </section>
+ 
     <!-- 🔗 Action buttons -->
     <div class="actions">
-      <a href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
-         class="btn btn-whatsapp"
-         target="_blank"
-         rel="noopener">
+      <a
+        href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
+        class="btn btn-whatsapp"
+        target="_blank"
+        rel="noopener"
+      >
         👥💬 Hlanganyela licembu leWhatsApp
       </a>
-
-      <a href="https://siswati.alfaradio.co.za"
-         class="btn btn-home">
+ 
+      <a href="https://siswati.alfaradio.co.za" class="btn btn-home">
         ⬅️ Buyela Ekhaya 🏠
       </a>
     </div>
   </main>
-
+ 
   <footer>
     © <span id="year"></span> Alfa Online Radio
   </footer>
-
-  <script>
+ 
+    <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
