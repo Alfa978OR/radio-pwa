@@ -2,24 +2,25 @@
 <html lang="ss">
 <head>
   <meta charset="utf-8">
-  <title>Info | Alfa Online Radio</title>
+  <title>Mayelana | Alfa Online Radio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
   <meta name="description" content="Lwati lwesiSwati ku-Alfa Online Radio – imininingwane, injongo, nekuchumana.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f172a">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (Cloudflare-safe absolute paths) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Info Siswati | Alfa Online Radio">
+  <meta property="og:title" content="Mayelana | Alfa Online Radio">
   <meta property="og:description" content="Lwati lwesiSwati nge-Alfa Online Radio.">
   <meta property="og:url" content="https://siswati.alfaradio.co.za/info.html">
-  <meta property="og:image" content="/og-image.png">
+  <meta property="og:image" content="https://alfaradio.co.za/og-image.png">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <!-- Favicon (absolute paths) -->
+  <link rel="icon" href="https://alfaradio.co.za/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://alfaradio.co.za/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://alfaradio.co.za/favicon-16.png">
 
   <style>
     body {
@@ -37,9 +38,10 @@
     }
 
     header img {
+      display: block;
       max-width: 140px;
       height: auto;
-      margin-bottom: 0.5rem;
+      margin: 0 auto 0.5rem;
     }
 
     header h1 {
@@ -119,80 +121,57 @@
 </head>
 
 <body>
-  <header>
-<img
-  src="https://alfaradio.co.za/radio-pwa/alfa-logo-landing-v3.png"
-  alt="Alfa Radio logo">
-<h1>Alfa Online Radio</h1>
-  </header>
+
+  <!-- Shared header injection -->
+  <div id="site-header"></div>
 
   <main>
-    <section id="identity">
+    <section>
       <h2>Ngubani futsi yini i-Alfa Online Radio?</h2>
       <p>
         IRadio Alfa yacala kusakata Tindzaba Letimnandzi ku-FM ngenyanga yaMeyi ngemnyaka wa-2000.
         I-Alfa Online Radio yacala kusakateka nge-inthanethi ngenyanga yaSepthemba ngemnyaka wa-2023
         ngesiSwati nangesiZulu. Balaleli bangalalela tinhlelo nemisebenti ye-Alfa Online Radio
-        ngemakhalekhukhwini abo kanye nangemakhompyutha. I-app lensha, lehlelelwe kahle kusebenta
-        ngemakhalekhukhwini, yethulwa ngenyanga yaBhimbidvwane (January) ngemnyaka wa-2026.
+        ngemakhalekhukhwini abo kanye nangemakhompyutha.
       </p>
       <p>
         I-Alfa Online Radio isakata kufundvwa kweBhayibheli ngevesi nangevesi, kufundziswa
-        kweBhayibheli, kanye nemicondvo nekukhutsata lokwakha umoya. Luhlelo lwetinhlelo
-        netindzaba letimayelana nekusakata kwabelwana ngato ngeWhatsApp Community Group.
-      </p>
-      <p>
-        Umsebenti nenhloso ye-Alfa Online Radio uchazwa kahle kakhulu ngalamavesi eBhayibheli
-        lalandzelako: Asitishumayeli tsine, kodvwa sishumayela kutsi Khristu Jesu uyiNkhosi, tsine-ke sitisebenti tenu ngenca yakhe. Ngobe yena lowo Nkulunkulu lowatsi: Akuvele kukhanya ebumnyameni, nguye futsi lokhanyise etinhlitiyweni tetfu, kuze sikwati kubona inkhatimulo yaNkulunkulu ebusweni baKhristu. (2 kubaseKorinthe 4:5–6)
+        kweBhayibheli, kanye nemicondvo nekukhutsata lokwakha umoya.
       </p>
     </section>
 
-    <section id="general-info">
+    <section>
       <h2>Kungani libito lelitsi “Alfa”?</h2>
       <p>
-        Libito lelitsi <strong>“Alfa”</strong> libonakalisa umlayeto weBhayibheli lotsi Nkulunkulu
-        usicalo nesiphetfo, ungumtfombo wekuphila, weliciniso, futsi unguLowo lowenta konkhe kube
-        kusha. Lelibito lisho sisekelo semsebenti webuKhristu we-Alfa Online Radio kanye nekutinikela
-        kwayo ekufundzisiseni iBhayibheli ngekwetsembeka nasekushumayeleni liVangeli.
-      </p>
-      <p>
-        • “Mine ngingu-Alfa na-Omega,” kusho iNkhosi, Nkulunkulu, Somandla lokhona, nalabekhona,
-        nalotako.” (Sembulo 1:8)
-      </p>
-      <p>
-        • Wase utsi kimi: “Sekwentekile. Mine ngingu-Alfa na-Omega, sicalo nesiphetfo. Lowo lowomile ngiyawumnika lilungelo lekunatsa mahhala emtfonjeni wemanti ekuphila. (Sembulo 21:6)
-      </p>
-      <p>
-        • “Ngingu-Alfa na-Omega, wekucala newekugcina, sicalo nesiphetfo.” (Sembulo 22:13)
+        Libito lelitsi <strong>“Alfa”</strong> libonakalisa kutsi Nkulunkulu usicalo nesiphetfo,
+        ungumtfombo wekuphila, weliciniso, futsi unguLowo lowenta konkhe kube kusha.
       </p>
     </section>
 
-    <section id="contact">
+    <section>
       <h2>Imininingwane yekutsintana</h2>
       <p>
-        • Joyina iWhatsApp Community Group kute utfole timemetelo kanye netindzaba tetinhlelo.
-        I-link iyatfolakala emakhasini lamabili labhalwe kutsi “Listen to”.
+        • Joyina iWhatsApp Community Group kute utfole timemetelo netindzaba tetinhlelo.
       </p>
       <p>
-        • Uma udzinga lolunye lwati, wemukelekile kutsi usithumele i-imeyili ku
-        <strong>info@alfaradio.co.za</strong>.
+        • Sithinte ku <strong>info@alfaradio.co.za</strong>.
       </p>
     </section>
 
-    <!-- 🔗 Action buttons -->
-    <div class="links">
+    <div class="actions">
+      <!-- WhatsApp button -->
       <a
         href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
-        class="btn whatsapp"
+        class="btn btn-whatsapp"
         target="_blank"
         rel="noopener"
       >
-        <span>Hlanganyela licembu</span><br>
-        <span>👥💬 leWhatsApp lebalaleli</span>
+        👥💬 Hlanganyela licembu leWhatsApp
       </a>
 
+      <!-- Home button -->
       <a href="https://siswati.alfaradio.co.za" class="btn btn-home">
-        ⬅️ Buyela Ekhaya 🏠
+        🏠 Buyela Ekhaya
       </a>
     </div>
   </main>
@@ -202,7 +181,16 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Shared header loader (Cloudflare / GitHub safe)
+    fetch("/shared/header.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("site-header").innerHTML = html;
+      });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+
 </body>
 </html>
