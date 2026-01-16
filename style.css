@@ -43,6 +43,10 @@ body {
    Unified buttons
 ========================= */
 
+.btn {
+  text-decoration: none;
+}
+
 button,
 .btn {
   display: block;
@@ -175,3 +179,4 @@ footer {
 .audio-status.error {
   color: #ffb020;
 }
+
