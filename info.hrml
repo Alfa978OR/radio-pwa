@@ -120,8 +120,10 @@
 
 <body>
   <header>
-    <img src="/alfa-logo-landing-v3.png" alt="Alfa Radio logo">
-    <h1>Alfa Online Radio</h1>
+<img
+  src="https://alfaradio.co.za/radio-pwa/alfa-logo-landing-v3.png"
+  alt="Alfa Radio logo">
+<h1>Alfa Online Radio</h1>
   </header>
 
   <main>
