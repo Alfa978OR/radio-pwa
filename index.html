@@ -22,7 +22,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 
-  <!-- LIVE status styles -->
+  <!-- LIVE status styles (page-specific) -->
   <style>
     .audio-status {
       margin-top: 0.7rem;
@@ -57,26 +57,38 @@
 
 <body>
   <div class="app">
-    <img src="logo.png" alt="Station Logo" class="logo">
 
-        <h1>Alfa Online Radio</h1>
+    <!-- 🔝 Logo -->
+    <img src="logo.png" alt="Alfa Online Radio logo" class="logo">
 
+    <!-- Accessible heading (hidden visually) -->
+    <h1 class="sr-only">Alfa Online Radio</h1>
+
+    <!-- 🏷️ Tagline / Instructions -->
     <p class="tagline">
-      <span>Khetha "Dlala ▶️ Play" kute ulalele kufundvwa kweBhayibheli.⚠️🔇 ekuqaleni kunekuthula cishe kwemizuzwana leli-10–20,⚠️📢 bese kulandzela sifihlakhondle sekutsengisa ngolimi lwangaphandle
-      (semizuzwana leli-30–40) ngaphambi kwekuti kufundvo kwemagama
-      eBhayibheli kucale.</span>
+      <span>
+        Khetha "Dlala ▶️ Play" kute ulalele kufundvwa kweBhayibheli.
+        ⚠️🔇 Ekuqaleni kunekuthula cishe kwemizuzwana leli-10–20,
+        ⚠️📢 bese kulandzela sifihlakhondle sekutsengisa ngolimi lwangaphandle
+        (semizuzwana leli-30–40) ngaphambi kwekuti kufundvo
+        kwemagama eBhayibheli kucale.
+      </span>
     </p>
 
+    <!-- ▶️ Play button -->
     <button id="playBtn" data-cf-analytics="Play Button Click">
       Dlala ▶️ Play
     </button>
 
+    <!-- 🔴 Status -->
     <div id="audioStatus" class="audio-status paused">
       KUMISIWE ⏸️ PAUSED
     </div>
 
     <!-- 🔗 Action buttons -->
     <div class="links">
+
+      <!-- WhatsApp -->
       <a
         href="https://chat.whatsapp.com/LFdZxr0VG6S6omDG2KlukL"
         class="btn whatsapp"
@@ -87,24 +99,24 @@
         <span>👥💬 leWhatsApp lebalaleli</span>
       </a>
 
-      <!-- 📖 SiSwati Bible -->
-<a
-  href="https://www.bible.com/af/bible/604/HEB.1.SWT"
-  class="btn read-bible"
-  target="_blank"
-  rel="noopener"
->
-  📖 Fundza liBhayibheli ngesiSwati
-</a>
+      <!-- 📖 Bible -->
+      <a
+        href="https://www.bible.com/af/bible/604/HEB.1.SWT"
+        class="btn read-bible"
+        target="_blank"
+        rel="noopener"
+      >
+        📖 Fundza liBhayibheli ngesiSwati
+      </a>
 
-      
-<a
-  href="https://siswati.alfaradio.co.za/info"
-  class="btn info"
-  onclick="if (window.cfBeacon) cfBeacon.trackEvent('siswati_info');"
->
-  ℹ️ Mayelana ne-Alfa Radio
-</a>
+      <!-- ℹ️ Info -->
+      <a
+        href="https://siswati.alfaradio.co.za/info"
+        class="btn info"
+        onclick="if (window.cfBeacon) cfBeacon.trackEvent('siswati_info');"
+      >
+        ℹ️ Mayelana ne-Alfa Radio
+      </a>
 
       <!-- 🏠 Home -->
       <a
@@ -113,8 +125,10 @@
       >
         🏠 Buyela ekhasini lekhaya
       </a>
+
     </div>
 
+    <!-- 🎧 Audio -->
     <audio id="radio" preload="none" crossorigin="anonymous">
       <source src="https://stream.zeno.fm/hx9w4enqbkmtv" type="audio/mpeg">
     </audio>
@@ -124,7 +138,7 @@
     © 2026 Alfa Online Radio
   </footer>
 
-  <!-- ✅ SINGLE, SAFE SCRIPT -->
+  <!-- ✅ Single, safe script -->
   <script>
     const audio = document.getElementById("radio");
     const playBtn = document.getElementById("playBtn");
@@ -198,12 +212,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
