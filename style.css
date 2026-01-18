@@ -1,58 +1,198 @@
-/* =========================================================
-   Primary layout width
-   Controls: logo + Play button
-   Change in ONE place only
-   ========================================================= */
+/* =========================
+   Global base
+========================= */
 
 :root {
-  --primary-width: 400px; /* desktop / tablet target width */
+  --button-width: 320px;
 }
 
-/* =========================================================
-   Top logo
-   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red-play: #e53935;
+  --green-whatsapp: #25d366;
+  --green-bible: #65a30d;
+  --blue-home: #2c7be5;
+  --blue-info: #64748b;
+  --text-soft: #eaf6ff;
+  --bg-dark: #111111;
+}
+
+header img {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.app {
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
 .logo {
-  width: 100%;
-  max-width: var(--primary-width);
-  height: auto;
-  max-height: 110px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 0.8rem;
+  width: 180px;
+  margin-bottom: 20px;
 }
 
-/* =========================================================
-   Play button (primary CTA)
-   ========================================================= */
+.tagline {
+  opacity: 0.85;
+  margin-bottom: 30px;
+  line-height: 1;
+}
 
-#playBtn {
+/* =========================
+   Unified buttons
+========================= */
+
+.btn {
+  text-decoration: none;
+}
+
+button,
+.btn {
+  display: block;
   width: 100%;
-  max-width: var(--primary-width);
-  padding: 0.9rem 1.2rem;
-  font-size: 1.05rem;
+  max-width: var(--button-width);
+  margin: 0 auto;
+  padding: 14px 22px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  line-height: 1.35;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Click feedback */
+button:active,
+.btn:active {
+  opacity: 0.85;
+}
+
+/* =========================
+   Button groups
+========================= */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+/* =========================
+   Button colors
+========================= */
+
+/* Play button */
+button#playBtn {
+  background: #e53935;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* WhatsApp / Bible buttons */
+.btn.whatsapp,
+.btn.btn-whatsapp {
+  background-color: #25d366; /* WhatsApp green */
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 700;
-  display: block;
-  margin: 0.8rem auto;
-  border-radius: 0.6rem;
 }
 
-/* =========================================================
-   Mobile refinement
-   ========================================================= */
+/* Home */
+.btn.home {
+  background: #2c7be5;
+  color: #ffffff;
+  text-decoration: none;
+}
 
-@media (max-width: 480px) {
+/* Info button */
+.btn.info,
+.button.btn-info {
+  background-color: #0284c7;   /* softer, darker blue */
+  color: #eaf6ff;              /* muted white */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+/* Hover states */
+button:hover,
+.btn:hover,
+.btn.btn-whatsapp:hover,
+.button.btn-info:hover {
+  filter: brightness(1.05);
+}
+
+/* Refined hover for Info button (slightly darker) */
+.btn.info:hover,
+.button.btn-info:hover {
+  background-color: #0369a1;
+  filter: brightness(1.05);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* =========================
+   Small screens
+========================= */
+
+@media (max-width: 360px) {
   :root {
-    --primary-width: 360px;
-  }
-
-  .logo {
-    max-height: 90px;
-    margin-bottom: 0.6rem;
-  }
-
-  #playBtn {
-    font-size: 1rem;
-    padding: 0.85rem 1.1rem;
+    --button-width: 100%;
   }
 }
+
+/* =========================
+   Audio status
+========================= */
+
+.audio-status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.audio-status.live {
+  color: #ff4d4d;
+}
+
+.audio-status.paused {
+  color: #bbbbbb;
+}
+
+.audio-status.error {
+  color: #ffb020;
+}
+
