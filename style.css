@@ -6,22 +6,43 @@
   /* Widths */
   --button-width: 320px;
 
-  /* Base typography */
-  --font-base: 13px;
-  --font-tagline: 1.1rem;
-  --font-button: 1rem;
-  --font-button-strong: 1.15rem;
-  --font-status: 0.95rem;
-  --font-footer: 0.85rem;
+  /* =====================
+     FONT SIZE RAMPS
+     (safe for older Android)
+  ===================== */
 
-  /* Font weights */
+  /* Base app text */
+  --font-base: clamp(16px, 2.1vh, 18px);
+
+  /* Buttons */
+  --font-button: clamp(15.5px, 2.0vh, 17.5px);
+
+  /* Primary (Play) button */
+  --font-button-strong: clamp(17px, 2.4vh, 20px);
+
+  /* Audio status */
+  --font-status: clamp(14.5px, 1.9vh, 16px);
+
+  /* Footer */
+  --font-footer: clamp(12.5px, 1.6vh, 14px);
+
+  /* =====================
+     TAGLINE (fixed, tighter)
+  ===================== */
+
+  --font-tagline: 0.95rem;
+  --line-tagline: 1.15;
+
+  /* =====================
+     Font weights
+  ===================== */
+
   --weight-normal: 400;
   --weight-semibold: 600;
   --weight-bold: 700;
 
   /* Line heights */
-  --line-tight: 1;
-  --line-normal: 1.1;
+  --line-normal: 1.35;
 }
 
 /* =========================
@@ -31,7 +52,6 @@
 :root {
   --red-play: #e53935;
   --green-whatsapp: #25d366;
-  --green-bible: #65a30d;
   --blue-home: #2c7be5;
   --blue-info: #0284c7;
   --blue-info-hover: #0369a1;
@@ -71,11 +91,18 @@ header img {
   margin-bottom: 20px;
 }
 
+/* =========================
+   TAGLINE (long text tuned)
+========================= */
+
 .tagline {
   font-size: var(--font-tagline);
-  line-height: var(--line-tight);
+  line-height: var(--line-tagline);
   opacity: 0.85;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
+  max-width: 36ch;     /* keeps long lines readable */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -132,10 +159,10 @@ button:active,
 }
 
 /* =========================
-   Button colors & emphasis
+   Buttons
 ========================= */
 
-/* Play button (primary action) */
+/* Play button */
 button#playBtn {
   background: var(--red-play);
   color: #ffffff;
@@ -143,43 +170,37 @@ button#playBtn {
   font-weight: var(--weight-bold);
 }
 
-/* WhatsApp button */
-.btn.whatsapp,
-.btn.btn-whatsapp {
+/* WhatsApp */
+.btn.whatsapp {
   background-color: var(--green-whatsapp);
   color: #ffffff;
-  font-size: var(--font-button);
   font-weight: var(--weight-bold);
 }
 
-/* Home button */
+/* Home */
 .btn.home {
   background: var(--blue-home);
   color: #ffffff;
-  font-size: var(--font-button);
 }
 
-/* Info button */
-.btn.info,
-.button.btn-info {
+/* Info */
+.btn.info {
   background-color: var(--blue-info);
   color: var(--text-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-size: 0.95rem;
-  font-weight: var(--weight-semibold);
+  font-size: 0.92rem;   /* intentionally smaller */
 }
 
-/* Hover states */
+/* Hover */
 button:hover,
 .btn:hover {
   filter: brightness(1.05);
 }
 
-.btn.info:hover,
-.button.btn-info:hover {
+.btn.info:hover {
   background-color: var(--blue-info-hover);
 }
 
@@ -195,17 +216,9 @@ button:hover,
   opacity: 0.85;
 }
 
-.audio-status.live {
-  color: #ff4d4d;
-}
-
-.audio-status.paused {
-  color: #bbbbbb;
-}
-
-.audio-status.error {
-  color: #ffb020;
-}
+.audio-status.live { color: #ff4d4d; }
+.audio-status.paused { color: #bbbbbb; }
+.audio-status.error { color: #ffb020; }
 
 /* =========================
    Footer
@@ -218,23 +231,20 @@ footer {
 }
 
 /* =========================
-   Small phones (≤360px)
+   Very small / older phones
 ========================= */
 
 @media (max-width: 360px) {
   :root {
     --button-width: 100%;
 
-    --font-base: 16px;
-    --font-tagline: 1.05rem;
-    --font-button: 0.95rem;
-    --font-button-strong: 1.1rem;
-    --font-status: 0.9rem;
-    --font-footer: 0.8rem;
+    /* tighten ramps slightly */
+    --font-base: clamp(15.5px, 2.0vh, 17px);
+    --font-button: clamp(15px, 1.9vh, 16.5px);
+    --font-button-strong: clamp(16.5px, 2.2vh, 18.5px);
   }
 
   .app {
     padding: 32px 16px;
   }
 }
-
