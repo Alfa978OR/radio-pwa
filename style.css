@@ -59,6 +59,16 @@
   --bg-dark: #111111;
 }
 
+:root {
+  /* Existing colors … */
+
+  /* Bible button (warm parchment brown) */
+  --brown-bible: #8b5a2b;        /* primary */
+  --brown-bible-hover: #744821;  /* hover */
+  --text-bible: #fff7e6;         /* soft parchment white */
+}
+
+
 /* =========================
    Global base
 ========================= */
@@ -194,6 +204,29 @@ button#playBtn {
   font-size: 0.92rem;   /* intentionally smaller */
 }
 
+/* =========================
+   Read Bible button
+========================= */
+
+.btn.read-bible {
+  background-color: var(--brown-bible);
+  color: var(--text-bible);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-button);
+}
+
+.btn.read-bible:hover {
+  background-color: var(--brown-bible-hover);
+}
+
+.btn.read-bible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
 /* Hover */
 button:hover,
 .btn:hover {
@@ -248,4 +281,5 @@ footer {
     padding: 32px 16px;
   }
 }
+
 
