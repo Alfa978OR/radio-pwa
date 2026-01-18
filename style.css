@@ -1,37 +1,81 @@
 /* =========================
-   Global base
+   Typography & layout variables
 ========================= */
 
 :root {
+  /* Widths */
   --button-width: 320px;
+
+  /* Base typography */
+  --font-base: 17px;
+  --font-tagline: 1.1rem;
+  --font-button: 1rem;
+  --font-button-strong: 1.15rem;
+  --font-status: 0.95rem;
+  --font-footer: 0.85rem;
+
+  /* Font weights */
+  --weight-normal: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line heights */
+  --line-tight: 1.1;
+  --line-normal: 1.35;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* =========================
+   Colors
+========================= */
 
 :root {
   --red-play: #e53935;
   --green-whatsapp: #25d366;
   --green-bible: #65a30d;
   --blue-home: #2c7be5;
-  --blue-info: #64748b;
+  --blue-info: #0284c7;
+  --blue-info-hover: #0369a1;
   --text-soft: #eaf6ff;
   --bg-dark: #111111;
 }
+
+/* =========================
+   Global base
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--font-base);
+  font-weight: var(--weight-normal);
+  background: var(--bg-dark);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* =========================
+   Header / logo
+========================= */
 
 header img {
   display: block;
   margin: 0 auto 0.5rem;
 }
 
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
 
-body {
-  margin: 0;
-  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #111;
-  color: #fff;
-  text-align: center;
+.tagline {
+  font-size: var(--font-tagline);
+  line-height: var(--line-tight);
+  opacity: 0.85;
+  margin-bottom: 30px;
 }
 
 /* =========================
@@ -42,17 +86,6 @@ body {
   max-width: 400px;
   margin: auto;
   padding: 40px 20px;
-}
-
-.logo {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.tagline {
-  opacity: 0.85;
-  margin-bottom: 30px;
-  line-height: 1;
 }
 
 /* =========================
@@ -72,9 +105,9 @@ button,
   padding: 14px 22px;
   text-align: center;
   border-radius: 10px;
-  font-weight: 600;
-  line-height: 1.35;
-  font-size: 16px;
+  font-size: var(--font-button);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-normal);
   cursor: pointer;
   border: none;
   appearance: none;
@@ -99,77 +132,55 @@ button:active,
 }
 
 /* =========================
-   Button colors
+   Button colors & emphasis
 ========================= */
 
-/* Play button */
+/* Play button (primary action) */
 button#playBtn {
-  background: #e53935;
+  background: var(--red-play);
   color: #ffffff;
-  font-size: 20px;
+  font-size: var(--font-button-strong);
+  font-weight: var(--weight-bold);
 }
 
-/* WhatsApp / Bible buttons */
+/* WhatsApp button */
 .btn.whatsapp,
 .btn.btn-whatsapp {
-  background-color: #25d366; /* WhatsApp green */
+  background-color: var(--green-whatsapp);
   color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
+  font-size: var(--font-button);
+  font-weight: var(--weight-bold);
 }
 
-/* Home */
+/* Home button */
 .btn.home {
-  background: #2c7be5;
+  background: var(--blue-home);
   color: #ffffff;
-  text-decoration: none;
+  font-size: var(--font-button);
 }
 
 /* Info button */
 .btn.info,
 .button.btn-info {
-  background-color: #0284c7;   /* softer, darker blue */
-  color: #eaf6ff;              /* muted white */
+  background-color: var(--blue-info);
+  color: var(--text-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
 }
 
 /* Hover states */
 button:hover,
-.btn:hover,
-.btn.btn-whatsapp:hover,
-.button.btn-info:hover {
+.btn:hover {
   filter: brightness(1.05);
 }
 
-/* Refined hover for Info button (slightly darker) */
 .btn.info:hover,
 .button.btn-info:hover {
-  background-color: #0369a1;
-  filter: brightness(1.05);
-}
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-  margin-top: 30px;
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* =========================
-   Small screens
-========================= */
-
-@media (max-width: 360px) {
-  :root {
-    --button-width: 100%;
-  }
+  background-color: var(--blue-info-hover);
 }
 
 /* =========================
@@ -178,8 +189,8 @@ footer {
 
 .audio-status {
   margin-top: 10px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: var(--font-status);
+  font-weight: var(--weight-semibold);
   letter-spacing: 0.04em;
   opacity: 0.85;
 }
@@ -196,6 +207,33 @@ footer {
   color: #ffb020;
 }
 
+/* =========================
+   Footer
+========================= */
 
+footer {
+  margin-top: 30px;
+  font-size: var(--font-footer);
+  opacity: 0.7;
+}
 
+/* =========================
+   Small phones (≤360px)
+========================= */
 
+@media (max-width: 360px) {
+  :root {
+    --button-width: 100%;
+
+    --font-base: 16px;
+    --font-tagline: 1.05rem;
+    --font-button: 0.95rem;
+    --font-button-strong: 1.1rem;
+    --font-status: 0.9rem;
+    --font-footer: 0.8rem;
+  }
+
+  .app {
+    padding: 32px 16px;
+  }
+}
