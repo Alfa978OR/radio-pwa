@@ -7,7 +7,7 @@
   --button-width: 320px;
 
   /* Base typography */
-  --font-base: 17px;
+  --font-base: 13px;
   --font-tagline: 1.1rem;
   --font-button: 1rem;
   --font-button-strong: 1.15rem;
@@ -20,8 +20,8 @@
   --weight-bold: 700;
 
   /* Line heights */
-  --line-tight: 1.1;
-  --line-normal: 1.35;
+  --line-tight: 1;
+  --line-normal: 1.1;
 }
 
 /* =========================
@@ -237,3 +237,4 @@ footer {
     padding: 32px 16px;
   }
 }
+
