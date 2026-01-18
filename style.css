@@ -30,7 +30,7 @@
      TAGLINE (fixed, tighter)
   ===================== */
 
-  --font-tagline: 0.95rem;
+  --font-tagline: 0.85rem;
   --line-tagline: 1.15;
 
   /* =====================
@@ -248,3 +248,4 @@ footer {
     padding: 32px 16px;
   }
 }
+
