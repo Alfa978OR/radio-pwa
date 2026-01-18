@@ -1,293 +1,58 @@
-/* =========================
-   Typography & layout variables
-========================= */
+/* =========================================================
+   Primary layout width
+   Controls: logo + Play button
+   Change in ONE place only
+   ========================================================= */
 
 :root {
-  /* Widths */
-  --button-width: 320px;
-
-  /* =====================
-     FONT SIZE RAMPS
-     (safe for older Android)
-  ===================== */
-
-  /* Base app text */
-  --font-base: clamp(16px, 2.1vh, 18px);
-
-  /* Buttons */
-  --font-button: clamp(15.5px, 2.0vh, 17.5px);
-
-  /* Primary (Play) button */
-  --font-button-strong: clamp(17px, 2.4vh, 20px);
-
-  /* Audio status */
-  --font-status: clamp(14.5px, 1.9vh, 16px);
-
-  /* Footer */
-  --font-footer: clamp(12.5px, 1.6vh, 14px);
-
-  /* =====================
-     TAGLINE (fixed, tighter)
-  ===================== */
-
-  --font-tagline: 0.85rem;
-  --line-tagline: 1.15;
-
-  /* =====================
-     Font weights
-  ===================== */
-
-  --weight-normal: 400;
-  --weight-semibold: 600;
-  --weight-bold: 700;
-
-  /* Line heights */
-  --line-normal: 1.35;
+  --primary-width: 400px; /* desktop / tablet target width */
 }
 
-/* =========================
-   Colors
-========================= */
-
-:root {
-  --red-play: #e53935;
-  --green-whatsapp: #25d366;
-  --blue-home: #2563eb;
-  --blue-info: #475569;
-  --blue-info-hover: #334155;
-  --text-soft: #f1f5f9;
-  --bg-dark: #111111;
-}
-
-:root {
-  /* Existing colors … */
-
-  /* Bible button (warm parchment brown) */
-  --brown-bible: #8b5a2b;        /* primary */
-  --brown-bible-hover: #744821;  /* hover */
-  --text-bible: #fff7e6;         /* soft parchment white */
-}
-
-
-/* =========================
-   Global base
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: var(--font-base);
-  font-weight: var(--weight-normal);
-  background: var(--bg-dark);
-  color: #ffffff;
-  text-align: center;
-}
-
-/* =========================
-   Header / logo
-========================= */
-
-header img {
-  display: block;
-  margin: 0 auto 0.5rem;
-}
+/* =========================================================
+   Top logo
+   ========================================================= */
 
 .logo {
   width: 100%;
-  max-width: 720px;        /* prevents it getting too big on desktop */
-  height: auto;            /* preserves aspect ratio */
-  max-height: 120px;       /* 👈 controls vertical height */
-  object-fit: contain;     /* prevents cropping or distortion */
+  max-width: var(--primary-width);
+  height: auto;
+  max-height: 110px;
+  object-fit: contain;
   display: block;
-  margin: 0 auto 0.8rem;   /* center + spacing below */
+  margin: 0 auto 0.8rem;
 }
 
+/* =========================================================
+   Play button (primary CTA)
+   ========================================================= */
 
-/* =========================
-   TAGLINE (long text tuned)
-========================= */
-
-.tagline {
-  font-size: var(--font-tagline);
-  line-height: var(--line-tagline);
-  opacity: 0.85;
-  margin-bottom: 26px;
-  max-width: 36ch;     /* keeps long lines readable */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* =========================
-   Layout
-========================= */
-
-.app {
-  max-width: 400px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* =========================
-   Unified buttons
-========================= */
-
-.btn {
-  text-decoration: none;
-}
-
-button,
-.btn {
-  display: block;
+#playBtn {
   width: 100%;
-  max-width: var(--button-width);
-  margin: 0 auto;
-  padding: 14px 22px;
-  text-align: center;
-  border-radius: 10px;
-  font-size: var(--font-button);
-  font-weight: var(--weight-semibold);
-  line-height: var(--line-normal);
-  cursor: pointer;
-  border: none;
-  appearance: none;
-  -webkit-appearance: none;
+  max-width: var(--primary-width);
+  padding: 0.9rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: block;
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
 }
 
-/* Click feedback */
-button:active,
-.btn:active {
-  opacity: 0.85;
-}
+/* =========================================================
+   Mobile refinement
+   ========================================================= */
 
-/* =========================
-   Button groups
-========================= */
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1.2rem;
-}
-
-/* =========================
-   Buttons
-========================= */
-
-/* Play button */
-button#playBtn {
-  background: var(--red-play);
-  color: #ffffff;
-  font-size: var(--font-button-strong);
-  font-weight: var(--weight-bold);
-}
-
-/* WhatsApp */
-.btn.whatsapp {
-  background-color: var(--green-whatsapp);
-  color: #ffffff;
-  font-weight: var(--weight-bold);
-}
-
-/* Home */
-.btn.home {
-  background: var(--blue-home);
-  color: #ffffff;
-}
-
-/* Info */
-.btn.info {
-  background-color: var(--blue-info);
-  color: var(--text-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-size: 0.92rem;   /* intentionally smaller */
-}
-
-/* =========================
-   Read Bible button
-========================= */
-
-.btn.read-bible {
-  background-color: var(--brown-bible);
-  color: var(--text-bible);
-  font-weight: var(--weight-semibold);
-  font-size: var(--font-button);
-}
-
-.btn.read-bible:hover {
-  background-color: var(--brown-bible-hover);
-}
-
-.btn.read-bible {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-
-/* Hover */
-button:hover,
-.btn:hover {
-  filter: brightness(1.05);
-}
-
-.btn.info:hover {
-  background-color: var(--blue-info-hover);
-}
-
-/* =========================
-   Audio status
-========================= */
-
-.audio-status {
-  margin-top: 10px;
-  font-size: var(--font-status);
-  font-weight: var(--weight-semibold);
-  letter-spacing: 0.04em;
-  opacity: 0.85;
-}
-
-.audio-status.live { color: #ff4d4d; }
-.audio-status.paused { color: #bbbbbb; }
-.audio-status.error { color: #ffb020; }
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-  margin-top: 30px;
-  font-size: var(--font-footer);
-  opacity: 0.7;
-}
-
-/* =========================
-   Very small / older phones
-========================= */
-
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   :root {
-    --button-width: 100%;
-
-    /* tighten ramps slightly */
-    --font-base: clamp(15.5px, 2.0vh, 17px);
-    --font-button: clamp(15px, 1.9vh, 16.5px);
-    --font-button-strong: clamp(16.5px, 2.2vh, 18.5px);
+    --primary-width: 360px;
   }
 
-  .app {
-    padding: 32px 16px;
+  .logo {
+    max-height: 90px;
+    margin-bottom: 0.6rem;
+  }
+
+  #playBtn {
+    font-size: 1rem;
+    padding: 0.85rem 1.1rem;
   }
 }
-
-
-
-
