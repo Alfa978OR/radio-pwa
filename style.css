@@ -2,10 +2,9 @@
    Typography & layout variables
 ========================= */
 
-:root {
-  /* Widths */
-  --button-width: 320px;
-
+   :root {
+  --primary-width: 400px; /* Play button + logo width */
+}
    
   /* =====================
      FONT SIZE RAMPS
@@ -280,4 +279,5 @@ footer {
     padding: 32px 16px;
   }
 }
+
 
