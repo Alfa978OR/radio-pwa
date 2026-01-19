@@ -53,10 +53,10 @@
 :root {
   --red-play: #e53935;
   --green-whatsapp: #25d366;
-  --blue-home: #2c7be5;
-  --blue-info: #0284c7;
-  --blue-info-hover: #0369a1;
-  --text-soft: #eaf6ff;
+   --blue-home: #2563eb;   /* rich, modern blue */
+   --blue-info: #475569;         /* slate */
+   --blue-info-hover: #334155;
+   --text-soft: #f1f5f9;
   --bg-dark: #111111;
 }
 
@@ -274,5 +274,6 @@ footer {
     padding: 32px 16px;
   }
 }
+
 
 
