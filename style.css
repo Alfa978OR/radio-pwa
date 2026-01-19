@@ -2,10 +2,10 @@
    Typography & layout variables
 ========================= */
 
-   :root {
-  --primary-width: 400px; /* Play button + logo width */
-}
-   
+:root {
+  /* Widths */
+  --button-width: 320px;
+
   /* =====================
      FONT SIZE RAMPS
      (safe for older Android)
@@ -279,5 +279,6 @@ footer {
     padding: 32px 16px;
   }
 }
+
 
 
