@@ -1,37 +1,108 @@
 /* =========================
-   Global base
+   Typography & layout variables
 ========================= */
 
 :root {
+  /* Widths */
   --button-width: 320px;
+
+  /* =====================
+     FONT SIZE RAMPS
+     (safe for older Android)
+  ===================== */
+
+  /* Base app text */
+  --font-base: clamp(16px, 2.1vh, 18px);
+
+  /* Buttons */
+  --font-button: clamp(15.5px, 2.0vh, 17.5px);
+
+  /* Primary (Play) button */
+  --font-button-strong: clamp(17px, 2.4vh, 20px);
+
+  /* Audio status */
+  --font-status: clamp(14.5px, 1.9vh, 16px);
+
+  /* Footer */
+  --font-footer: clamp(12.5px, 1.6vh, 14px);
+
+  /* =====================
+     TAGLINE (fixed, tighter)
+  ===================== */
+
+  --font-tagline: 0.95rem;
+  --line-tagline: 1.15;
+
+  /* =====================
+     Font weights
+  ===================== */
+
+  --weight-normal: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line heights */
+  --line-normal: 1.35;
 }
+
+/* =========================
+   Colors
+========================= */
+
+:root {
+  --red-play: #e53935;
+  --green-whatsapp: #25d366;
+  --blue-home: #2c7be5;
+  --blue-info: #0284c7;
+  --blue-info-hover: #0369a1;
+  --text-soft: #eaf6ff;
+  --bg-dark: #111111;
+}
+
+/* =========================
+   Global base
+========================= */
 
 * {
   box-sizing: border-box;
 }
 
-:root {
-  --red-play: #e53935;
-  --green-whatsapp: #25d366;
-  --green-bible: #65a30d;
-  --blue-home: #2c7be5;
-  --blue-info: #64748b;
-  --text-soft: #eaf6ff;
-  --bg-dark: #111111;
+body {
+  margin: 0;
+  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--font-base);
+  font-weight: var(--weight-normal);
+  background: var(--bg-dark);
+  color: #ffffff;
+  text-align: center;
 }
+
+/* =========================
+   Header / logo
+========================= */
 
 header img {
   display: block;
   margin: 0 auto 0.5rem;
 }
 
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
 
-body {
-  margin: 0;
-  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #111;
-  color: #fff;
-  text-align: center;
+/* =========================
+   TAGLINE (long text tuned)
+========================= */
+
+.tagline {
+  font-size: var(--font-tagline);
+  line-height: var(--line-tagline);
+  opacity: 0.85;
+  margin-bottom: 26px;
+  max-width: 36ch;     /* keeps long lines readable */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -42,17 +113,6 @@ body {
   max-width: 400px;
   margin: auto;
   padding: 40px 20px;
-}
-
-.logo {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.tagline {
-  opacity: 0.85;
-  margin-bottom: 30px;
-  line-height: 1;
 }
 
 /* =========================
@@ -72,9 +132,9 @@ button,
   padding: 14px 22px;
   text-align: center;
   border-radius: 10px;
-  font-weight: 600;
-  line-height: 1.35;
-  font-size: 16px;
+  font-size: var(--font-button);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-normal);
   cursor: pointer;
   border: none;
   appearance: none;
@@ -99,77 +159,49 @@ button:active,
 }
 
 /* =========================
-   Button colors
+   Buttons
 ========================= */
 
 /* Play button */
 button#playBtn {
-  background: #e53935;
+  background: var(--red-play);
   color: #ffffff;
-  font-size: 20px;
+  font-size: var(--font-button-strong);
+  font-weight: var(--weight-bold);
 }
 
-/* WhatsApp / Bible buttons */
-.btn.whatsapp,
-.btn.btn-whatsapp {
-  background-color: #25d366; /* WhatsApp green */
+/* WhatsApp */
+.btn.whatsapp {
+  background-color: var(--green-whatsapp);
   color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
 }
 
 /* Home */
 .btn.home {
-  background: #2c7be5;
+  background: var(--blue-home);
   color: #ffffff;
-  text-decoration: none;
 }
 
-/* Info button */
-.btn.info,
-.button.btn-info {
-  background-color: #0284c7;   /* softer, darker blue */
-  color: #eaf6ff;              /* muted white */
+/* Info */
+.btn.info {
+  background-color: var(--blue-info);
+  color: var(--text-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-weight: 600;
+  font-size: 0.92rem;   /* intentionally smaller */
 }
 
-/* Hover states */
+/* Hover */
 button:hover,
-.btn:hover,
-.btn.btn-whatsapp:hover,
-.button.btn-info:hover {
+.btn:hover {
   filter: brightness(1.05);
 }
 
-/* Refined hover for Info button (slightly darker) */
-.btn.info:hover,
-.button.btn-info:hover {
-  background-color: #0369a1;
-  filter: brightness(1.05);
-}
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-  margin-top: 30px;
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* =========================
-   Small screens
-========================= */
-
-@media (max-width: 360px) {
-  :root {
-    --button-width: 100%;
-  }
+.btn.info:hover {
+  background-color: var(--blue-info-hover);
 }
 
 /* =========================
@@ -178,21 +210,41 @@ footer {
 
 .audio-status {
   margin-top: 10px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: var(--font-status);
+  font-weight: var(--weight-semibold);
   letter-spacing: 0.04em;
   opacity: 0.85;
 }
 
-.audio-status.live {
-  color: #ff4d4d;
+.audio-status.live { color: #ff4d4d; }
+.audio-status.paused { color: #bbbbbb; }
+.audio-status.error { color: #ffb020; }
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  margin-top: 30px;
+  font-size: var(--font-footer);
+  opacity: 0.7;
 }
 
-.audio-status.paused {
-  color: #bbbbbb;
-}
+/* =========================
+   Very small / older phones
+========================= */
 
-.audio-status.error {
-  color: #ffb020;
-}
+@media (max-width: 360px) {
+  :root {
+    --button-width: 100%;
 
+    /* tighten ramps slightly */
+    --font-base: clamp(15.5px, 2.0vh, 17px);
+    --font-button: clamp(15px, 1.9vh, 16.5px);
+    --font-button-strong: clamp(16.5px, 2.2vh, 18.5px);
+  }
+
+  .app {
+    padding: 32px 16px;
+  }
+}
