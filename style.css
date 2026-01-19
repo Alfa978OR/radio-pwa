@@ -6,6 +6,16 @@
   /* Widths */
   --button-width: 320px;
 
+:root {
+  /* Existing colors … */
+
+  /* Bible button (warm parchment brown) */
+  --brown-bible: #8b5a2b;        /* primary */
+  --brown-bible-hover: #744821;  /* hover */
+  --text-bible: #fff7e6;         /* soft parchment white */
+}
+
+   
   /* =====================
      FONT SIZE RAMPS
      (safe for older Android)
@@ -205,6 +215,22 @@ button:hover,
 }
 
 /* =========================
+   Read Bible button
+========================= */
+
+.btn.read-bible {
+  background-color: var(--brown-bible);
+  color: var(--text-bible);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-button);
+}
+
+.btn.read-bible:hover {
+  background-color: var(--brown-bible-hover);
+}
+
+
+/* =========================
    Audio status
 ========================= */
 
@@ -248,3 +274,4 @@ footer {
     padding: 32px 16px;
   }
 }
+
