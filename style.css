@@ -188,9 +188,9 @@ button#playBtn {
 }
 
 /* Home */
-.btn.home {
-  background: var(--blue-home);
-  color: #ffffff;
+.btn-home {
+  background: #2563eb; /* same as app Home */
+   color: #ffffff;
 }
 
 /* Info */
@@ -274,6 +274,7 @@ footer {
     padding: 32px 16px;
   }
 }
+
 
 
 
